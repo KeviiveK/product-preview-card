@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(30, 38%, 92%);
+    height: 100vh;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.container {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: center;
+
+    font-size: 14px;
+}
+
+.product {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    background-color: #FFF;
+
+    font-family: "Montserrat";
+    color: hsl(228, 12%, 48%);
+}
+
+.product__category {
+    align-self: flex-start;
+
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+}
+
+.product__name {
+    font-family: "Fraunces";
+    font-size: 2.5em;
+    line-height: 1em;
+    color: hsl(212, 21%, 14%);
+}
+
+.product__desc {
+    line-height: 1.5em;
+}
+
+.product-price {
+    display: flex;
+
+    align-self: flex-start;
+    align-items: center;
+}
+
+.product-price>p:first-of-type {
+    margin-right: 20px;
+
+    font-family: "Fraunces";
+    font-size: 2.5em;
+    color: hsl(158, 36%, 37%);
+}
+
+.product-price>p:last-of-type {
+    text-decoration: line-through;
+}
+
+.button {
+    border: none;
+    border-radius: 10px;
+    padding: 1em;
+    background-color: hsl(158, 36%, 37%);
+    width: 100%;
+    max-width: 350px;
+
+    font-size: 1em;
+    font-weight: 700;
+    color: #FFF;
+
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: hsl(158, 36%, 20%);
+}
+
+.button::before {
+    content: url(./images/icon-cart.svg);
+
+    margin-right: 10px;
+
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 700px) {
+    .product-image {
+        display: block;
+
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+    }
+
+    .product {
+        border-radius: 0 0 10px 10px;
+        height: 460px;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: 20px;
+    }
+}
+
+@media screen and (min-width: 701px) {
+    .product {
+        border-radius: 0 10px 10px 0;
+        width: 350px;
+    }
+
+    .product-image {
+        border-radius: 10px 0 0 10px;
+        width: 350px;
+    }
+}
